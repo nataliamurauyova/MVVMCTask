@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='MVVMTaskTests.xctest' tests='18' failures='0'>
+  <testsuite name='MVVMTaskTests.LoginViewModelTests' tests='7' failures='0'>
+    <testcase classname='MVVMTaskTests.LoginViewModelTests' name='testAreCredentialsValid_False_wrongEmail' time='0.003'/>
+    <testcase classname='MVVMTaskTests.LoginViewModelTests' name='testAreCredentialsValid_False_wrongEmailPassword' time='0.000'/>
+    <testcase classname='MVVMTaskTests.LoginViewModelTests' name='testAreCredentialsValid_False_wrongPassword' time='0.000'/>
+    <testcase classname='MVVMTaskTests.LoginViewModelTests' name='testAreCredentialsValid_True' time='0.000'/>
+    <testcase classname='MVVMTaskTests.LoginViewModelTests' name='testCredentialsValidation_Failure_WrongEmail' time='0.000'/>
+    <testcase classname='MVVMTaskTests.LoginViewModelTests' name='testCredentialsValidation_Failure_WrongPassword' time='0.000'/>
+    <testcase classname='MVVMTaskTests.LoginViewModelTests' name='testCredentialsValidation_Success' time='0.000'/>
+  </testsuite>
+  <testsuite name='MVVMTaskTests.NetworkManagerTests' tests='3' failures='0'>
+    <testcase classname='MVVMTaskTests.NetworkManagerTests' name='testGetStrings_Failure_NoData' time='0.440'/>
+    <testcase classname='MVVMTaskTests.NetworkManagerTests' name='testGetStrings_Failure_ParsingError' time='0.003'/>
+    <testcase classname='MVVMTaskTests.NetworkManagerTests' name='testGetStrings_Success' time='0.695'/>
+  </testsuite>
+  <testsuite name='MVVMTaskTests.StringListViewControllerTests' tests='2' failures='0'>
+    <testcase classname='MVVMTaskTests.StringListViewControllerTests' name='testReloadData' time='0.012'/>
+    <testcase classname='MVVMTaskTests.StringListViewControllerTests' name='testShowErrorAlert' time='0.034'/>
+  </testsuite>
+  <testsuite name='MVVMTaskTests.StringListViewModelTests' tests='6' failures='0'>
+    <testcase classname='MVVMTaskTests.StringListViewModelTests' name='testConfigureTableView' time='0.004'/>
+    <testcase classname='MVVMTaskTests.StringListViewModelTests' name='testErrorAlertView' time='0.017'/>
+    <testcase classname='MVVMTaskTests.StringListViewModelTests' name='testLoadStrings_Failure_wrongURL' time='0.001'/>
+    <testcase classname='MVVMTaskTests.StringListViewModelTests' name='testLoadStrings_Failure' time='0.001'/>
+    <testcase classname='MVVMTaskTests.StringListViewModelTests' name='testLoadStrings_Success' time='0.001'/>
+    <testcase classname='MVVMTaskTests.StringListViewModelTests' name='testNumberOfRowsInSection' time='0.001'/>
+  </testsuite>
+</testsuites>

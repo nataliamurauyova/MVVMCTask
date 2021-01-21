@@ -1,0 +1,44 @@
+
+identifier = CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier)
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Lane for creating a build and running tests"
+    lane :build do
+  	  slack(
+		  message: "Started building!",
+		  channel: "#my-app-channel",
+		  success: true,
+		  default_payloads: [:git_branch],
+		  payload: {  # Optional, lets you specify any number of your own Slack attachments.
+		    "Target Name" => identifier
+		  },
+		  attachment_properties: {
+		       fields: [
+		           {
+		               title: "Build number",
+		               value: ENV["BUILD_NUMBER"],
+		           }
+		       ]}
+		       )
+    build_app(scheme: "MVVMTask")
+    run_tests(scheme: "MVVMTaskTests")
+  slack(
+		  message: "Started building!",
+		  channel: "#my-app-channel",
+		  success: true,
+		  default_payloads: [:git_branch],
+		  payload: {  # Optional, lets you specify any number of your own Slack attachments.
+		    "Target Name" => identifier
+		  },
+		  attachment_properties: {
+		       fields: [
+		           {
+		               title: "Build number",
+		               value: ENV["BUILD_NUMBER"],
+		           }
+		       ]}
+		       )
+  end
+end
