@@ -4,9 +4,8 @@
 //
 //  Created by Nataliya Murauyova on 11/22/20.
 //
-
-import XCTest
 @testable import MVVMTask
+import XCTest
 
 class NetworkManagerTests: XCTestCase {
 
@@ -52,18 +51,15 @@ class NetworkManagerTests: XCTestCase {
     func testGetStrings_Failure_NoData() throws {
         let exp = expectation(description: #function)
         let url = try XCTUnwrap(URL(string: "https://www.error.com"))
-        
+
         let networkManager = NetworkManager()
         networkManager.getStrings(from: url) { (stringList, error) in
             XCTAssertNil(stringList)
             XCTAssertNotNil(error)
-            
+
             exp.fulfill()
         }
-        
+
         wait(for: [exp], timeout: 5.0)
     }
-
-
-
 }

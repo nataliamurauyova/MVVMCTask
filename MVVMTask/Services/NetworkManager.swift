@@ -27,7 +27,6 @@ class NetworkManager: NetworkManagerProtocol {
                 } else {
                     completion(nil, NetworkManagerError.cantParseStringsArray)
                 }
-
             }
         }
 

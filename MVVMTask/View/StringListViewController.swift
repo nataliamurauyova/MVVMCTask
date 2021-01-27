@@ -17,7 +17,7 @@ class StringListViewController: UIViewController, StringListViewProtocol {
 
     @IBOutlet weak var stringsTableView: UITableView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
-    
+
     var viewModel: StringListViewModelProtocol!
     var coordinator: AppCoordinatorProtocol!
 
@@ -58,7 +58,7 @@ class StringListViewController: UIViewController, StringListViewProtocol {
     }
 
     func showErrorAlert(with error: Error) {
-        let alertView = viewModel.errorAlertView(for: error, with: { [weak self] _ in self?.reloadData() })
+        let alertView = viewModel.errorAlertView(for: error) { [weak self] _ in self?.reloadData() }
         coordinator.showAlert(alertView, on: self)
     }
 }

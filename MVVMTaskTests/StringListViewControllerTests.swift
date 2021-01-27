@@ -4,9 +4,8 @@
 //
 //  Created by Nataliya Murauyova on 11/22/20.
 //
-
-import XCTest
 @testable import MVVMTask
+import XCTest
 
 class StringListViewControllerTests: XCTestCase {
 

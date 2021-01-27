@@ -1,0 +1,44 @@
+warning_threshold: 1
+disabled_rules:
+  - todo
+  - control_statement
+  - type_name
+  - unused_closure_parameter
+  - identifier_name
+  - unused_setter_value
+opt_in_rules:
+  - force_unwrapping
+  - closing_brace
+  - opening_brace
+  - return_arrow_whitespace
+  - trailing_semicolon
+  - statement_position
+  - attributes
+  - closure_end_indentation
+  - multiline_arguments
+  - multiline_arguments_brackets
+  - empty_count
+  - empty_string
+  - fallthrough
+  - first_where
+  - last_where
+  - literal_expression_end_indentation
+  - switch_case_on_newline
+  - redundant_type_annotation
+  - multiline_parameters
+  - operator_usage_whitespace
+  - sorted_imports
+  - multiline_function_chains
+  - toggle_bool
+  - vertical_parameter_alignment_on_call
+  - vertical_whitespace_closing_braces
+  - unused_import
+  - yoda_condition
+  - trailing_closure
+cyclomatic_complexity:
+  ignores_case_statements: true
+line_length: 300
+type_body_length:
+  warning: 300
+  error: 500
+reporter: "xcode"

@@ -22,7 +22,7 @@ class LoginViewController: UIViewController, LoginViewProtocol {
 
     @IBAction func loginButtonPressed(_ sender: Any) {
         let validation = viewModel.credentialsValidation(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
-        if viewModel.areCredentialsValid(validation){
+        if viewModel.areCredentialsValid(validation) {
             performSegue(withIdentifier: Constants.stringsVCSegueIdentifier, sender: self)
         } else {
             setErrorState(basedOn: validation)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CF75C6F5239ED4903A9DADE /* Pods_MVVMTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B34021106CF509E0B2B9E469 /* Pods_MVVMTask.framework */; };
 		7743DA77256A873B00D3291C /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7743DA76256A873B00D3291C /* NetworkManagerTests.swift */; };
 		7743DA7C256A8F7500D3291C /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7743DA7B256A8F7500D3291C /* LoginViewModelTests.swift */; };
 		7743DA81256A919300D3291C /* StringListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7743DA80256A919300D3291C /* StringListViewModelTests.swift */; };
@@ -24,6 +25,7 @@
 		77AA1DED25694B2400CC674E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AA1DEC25694B2400CC674E /* NetworkManager.swift */; };
 		77AA1DF225694E3A00CC674E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AA1DF125694E3A00CC674E /* AppCoordinator.swift */; };
 		77AA1E3A2569BC3500CC674E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AA1E392569BC3500CC674E /* Constants.swift */; };
+		AB700BE7CFDD7FA3EF5B5787 /* Pods_MVVMTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F1D6705B50D30EE1B1A876 /* Pods_MVVMTaskTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2BE4D9CE400ED23E97BF899E /* Pods-MVVMTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-MVVMTaskTests/Pods-MVVMTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4D31CF5EB3C2EFDF7D5B7631 /* Pods-MVVMTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMTask.release.xcconfig"; path = "Target Support Files/Pods-MVVMTask/Pods-MVVMTask.release.xcconfig"; sourceTree = "<group>"; };
 		7743DA76256A873B00D3291C /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		7743DA7B256A8F7500D3291C /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		7743DA80256A919300D3291C /* StringListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringListViewModelTests.swift; sourceTree = "<group>"; };
@@ -58,6 +62,10 @@
 		77AA1DEC25694B2400CC674E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		77AA1DF125694E3A00CC674E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		77AA1E392569BC3500CC674E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8A695FBC6023275A9E6993CF /* Pods-MVVMTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMTask.debug.xcconfig"; path = "Target Support Files/Pods-MVVMTask/Pods-MVVMTask.debug.xcconfig"; sourceTree = "<group>"; };
+		96F1D6705B50D30EE1B1A876 /* Pods_MVVMTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3F851BF03AC56AF794190E7 /* Pods-MVVMTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMTaskTests.release.xcconfig"; path = "Target Support Files/Pods-MVVMTaskTests/Pods-MVVMTaskTests.release.xcconfig"; sourceTree = "<group>"; };
+		B34021106CF509E0B2B9E469 /* Pods_MVVMTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CF75C6F5239ED4903A9DADE /* Pods_MVVMTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,18 +81,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB700BE7CFDD7FA3EF5B5787 /* Pods_MVVMTaskTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40E36492EC044A8A5BF10404 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B34021106CF509E0B2B9E469 /* Pods_MVVMTask.framework */,
+				96F1D6705B50D30EE1B1A876 /* Pods_MVVMTaskTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		77AA1D8A2569379600CC674E = {
 			isa = PBXGroup;
 			children = (
 				77AA1D952569379600CC674E /* MVVMTask */,
 				77AA1DAC2569379B00CC674E /* MVVMTaskTests */,
 				77AA1D942569379600CC674E /* Products */,
+				94BE60D8940E6B481BCA8B4A /* Pods */,
+				40E36492EC044A8A5BF10404 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,6 +190,17 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		94BE60D8940E6B481BCA8B4A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A695FBC6023275A9E6993CF /* Pods-MVVMTask.debug.xcconfig */,
+				4D31CF5EB3C2EFDF7D5B7631 /* Pods-MVVMTask.release.xcconfig */,
+				2BE4D9CE400ED23E97BF899E /* Pods-MVVMTaskTests.debug.xcconfig */,
+				A3F851BF03AC56AF794190E7 /* Pods-MVVMTaskTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,9 +208,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77AA1DBD2569379B00CC674E /* Build configuration list for PBXNativeTarget "MVVMTask" */;
 			buildPhases = (
+				DE5DABBCD8396971D1B15645 /* [CP] Check Pods Manifest.lock */,
 				77AA1D8F2569379600CC674E /* Sources */,
 				77AA1D902569379600CC674E /* Frameworks */,
 				77AA1D912569379600CC674E /* Resources */,
+				773E321925C19BD900D83AB7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -193,6 +227,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77AA1DC02569379B00CC674E /* Build configuration list for PBXNativeTarget "MVVMTaskTests" */;
 			buildPhases = (
+				FF97EA2EE702F4FE1C0EB792 /* [CP] Check Pods Manifest.lock */,
 				77AA1DA52569379B00CC674E /* Sources */,
 				77AA1DA62569379B00CC674E /* Frameworks */,
 				77AA1DA72569379B00CC674E /* Resources */,
@@ -263,6 +298,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		773E321925C19BD900D83AB7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
+		DE5DABBCD8396971D1B15645 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MVVMTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF97EA2EE702F4FE1C0EB792 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MVVMTaskTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		77AA1D8F2569379600CC674E /* Sources */ = {
@@ -441,6 +540,7 @@
 		};
 		77AA1DBE2569379B00CC674E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A695FBC6023275A9E6993CF /* Pods-MVVMTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -459,6 +559,7 @@
 		};
 		77AA1DBF2569379B00CC674E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D31CF5EB3C2EFDF7D5B7631 /* Pods-MVVMTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -477,6 +578,7 @@
 		};
 		77AA1DC12569379B00CC674E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BE4D9CE400ED23E97BF899E /* Pods-MVVMTaskTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -498,6 +600,7 @@
 		};
 		77AA1DC22569379B00CC674E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3F851BF03AC56AF794190E7 /* Pods-MVVMTaskTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

@@ -4,9 +4,8 @@
 //
 //  Created by Nataliya Murauyova on 11/22/20.
 //
-
-import XCTest
 @testable import MVVMTask
+import XCTest
 
 class StringListViewModelTests: XCTestCase {
 
@@ -74,7 +73,7 @@ class StringListViewModelTests: XCTestCase {
     func testErrorAlertView() {
         let viewModel = StringListViewModel()
 
-        let alertView = viewModel.errorAlertView(for: NetworkManagerError.noURL, with: { _ in })
+        let alertView = viewModel.errorAlertView(for: NetworkManagerError.noURL) { _ in }
 
         XCTAssertEqual(alertView.title, "Something went wrong 😔 - The operation couldn’t be completed. (MVVMTask.NetworkManagerError error 1.)")
         XCTAssertEqual(alertView.message, "Please try reloading the page")
