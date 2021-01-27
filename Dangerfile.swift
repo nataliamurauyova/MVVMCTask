@@ -11,9 +11,3 @@ if danger.github.pullRequest.user.login == "someStarngeUsername" {
     warn("Not this guy again!")
 }
 
-xcov.report(
-   scheme: 'EasyPeasy',
-   workspace: 'Example/EasyPeasy.xcworkspace',
-   exclude_targets: 'Demo.app',
-   minimum_coverage_percentage: 90
-)
