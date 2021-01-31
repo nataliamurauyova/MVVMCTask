@@ -51,6 +51,8 @@ class MockViewModel: NSObject, StringListViewModelProtocol {
     func configure(tableView: UITableView) {
     }
 
+    func sortStrings(basedOn index: SelectedIndex) { }
+
     func errorAlertView(for error: Error, with handler: @escaping (UIAlertAction) -> Void) -> UIAlertController {
         errorAlertViewCalled = true
         return UIAlertController()

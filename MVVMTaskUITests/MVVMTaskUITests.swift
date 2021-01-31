@@ -68,4 +68,33 @@ class MVVMTaskUITests: XCTestCase {
         XCTAssertTrue(emailLabel.exists)
         XCTAssertTrue(passwordLabel.exists)
     }
+
+    func testSegmentedControl() throws {
+        // UI tests must launch the application that they test.
+        let app = XCUIApplication()
+        app.launch()
+
+        let emailLabel = app.textFields["emailLabel"]
+        emailLabel.tap()
+        emailLabel.typeText("user")
+
+        let passwordLabel = app.textFields["passwordLabel"]
+        passwordLabel.tap()
+        passwordLabel.typeText("123qwe")
+
+        // Hiding keyboard
+        XCUIApplication().keyboards.buttons["Return"].tap()
+
+        let loginButton = app.buttons["loginButton"]
+        loginButton.tap()
+
+        let segmentedControlSection1 = app.segmentedControls.buttons.element(boundBy: 0)
+        XCTAssertEqual(segmentedControlSection1.label, "As is")
+
+        let segmentedControlSection2 = app.segmentedControls.buttons.element(boundBy: 1)
+        XCTAssertEqual(segmentedControlSection2.label, "A-Z")
+
+        let segmentedControlSection3 = app.segmentedControls.buttons.element(boundBy: 2)
+        XCTAssertEqual(segmentedControlSection3.label, "Z-A")
+    }
 }

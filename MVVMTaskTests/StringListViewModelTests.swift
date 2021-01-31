@@ -90,6 +90,47 @@ class StringListViewModelTests: XCTestCase {
 
         XCTAssertEqual(numberOfRows, 2)
     }
+
+    func testSortStrings_FromAToZ() {
+        let dataSource = StringList(strings: ["bcd", "cFgsd", "abc"])
+        let viewModel = StringListViewModel()
+        viewModel.dataSource = dataSource
+
+        viewModel.sortStrings(basedOn: .fromAToZ)
+
+        XCTAssertEqual(viewModel.dataSource?.strings, ["abc", "bcd", "cFgsd"])
+    }
+
+    func testSetInitialStringList() {
+        let viewModel = StringListViewModel()
+        let networkManager = MockNetworkManager()
+        networkManager.stringsArray = StringList(strings: ["bcd", "cFgsd", "abc"])
+        viewModel.networkManager = networkManager
+
+        let exp = expectation(description: #function)
+        viewModel.loadStrings(from: "https://validURL.com") { (error) in
+            XCTAssertNotNil(viewModel.dataSource)
+            XCTAssertEqual(viewModel.dataSource?.strings, ["bcd", "cFgsd", "abc"])
+            XCTAssertNil(error)
+
+            viewModel.sortStrings(basedOn: .asIs)
+            XCTAssertEqual(viewModel.dataSource?.strings, ["bcd", "cFgsd", "abc"])
+
+            exp.fulfill()
+        }
+
+        wait(for: [exp], timeout: 2.0)
+    }
+
+    func testSortStrings_FromZToA() {
+        let dataSource = StringList(strings: ["bcd", "cFgsd", "abc"])
+        let viewModel = StringListViewModel()
+        viewModel.dataSource = dataSource
+
+        viewModel.sortStrings(basedOn: .fromZToA)
+
+        XCTAssertEqual(viewModel.dataSource?.strings, ["cFgsd", "bcd", "abc"])
+    }
 }
 
 class MockNetworkManager: NetworkManagerProtocol {

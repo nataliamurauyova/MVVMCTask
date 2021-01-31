@@ -15,6 +15,7 @@ protocol StringListViewProtocol {
 
 class StringListViewController: UIViewController, StringListViewProtocol {
 
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var stringsTableView: UITableView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
 
@@ -57,6 +58,11 @@ class StringListViewController: UIViewController, StringListViewProtocol {
         }
     }
 
+    @IBAction func segmentedControlSelected(_ sender: UISegmentedControl) {
+        let selectedIndex = SelectedIndex(rawValue: sender.selectedSegmentIndex) ?? .asIs
+        viewModel.sortStrings(basedOn: selectedIndex)
+        stringsTableView.reloadData()
+    }
     func showErrorAlert(with error: Error) {
         let alertView = viewModel.errorAlertView(for: error) { [weak self] _ in self?.reloadData() }
         coordinator.showAlert(alertView, on: self)

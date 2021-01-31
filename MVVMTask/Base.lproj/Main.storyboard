@@ -122,8 +122,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3NO-IH-12y">
+                                <rect key="frame" x="0.0" y="10" width="414" height="32"/>
+                                <segments>
+                                    <segment title="As is"/>
+                                    <segment title="A-Z"/>
+                                    <segment title="Z-A"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlSelected:" destination="vwZ-Jc-4yb" eventType="valueChanged" id="uGO-el-YMY"/>
+                                </connections>
+                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RaW-Id-g4T">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="46" width="414" height="762"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StringsTableViewCell" textLabel="K1X-If-d1g" style="IBUITableViewCellStyleDefault" id="b82-5C-tRd">
@@ -153,17 +164,21 @@
                         <viewLayoutGuide key="safeArea" id="Cz3-jA-t8A"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="3NO-IH-12y" firstAttribute="leading" secondItem="Cz3-jA-t8A" secondAttribute="leading" id="LrI-iG-SSX"/>
                             <constraint firstItem="a2L-ae-e5M" firstAttribute="centerY" secondItem="fxu-pL-pyX" secondAttribute="centerY" id="PQC-C8-BNh"/>
                             <constraint firstItem="Cz3-jA-t8A" firstAttribute="bottom" secondItem="RaW-Id-g4T" secondAttribute="bottom" id="Weh-xR-qiz"/>
+                            <constraint firstItem="RaW-Id-g4T" firstAttribute="top" secondItem="3NO-IH-12y" secondAttribute="bottom" constant="5" id="ZNW-mE-OFQ"/>
                             <constraint firstItem="Cz3-jA-t8A" firstAttribute="trailing" secondItem="RaW-Id-g4T" secondAttribute="trailing" id="aP3-2X-VVl"/>
-                            <constraint firstItem="RaW-Id-g4T" firstAttribute="top" secondItem="Cz3-jA-t8A" secondAttribute="top" id="adr-C4-ROB"/>
                             <constraint firstItem="RaW-Id-g4T" firstAttribute="centerX" secondItem="fxu-pL-pyX" secondAttribute="centerX" id="bc3-SG-mfu"/>
                             <constraint firstItem="RaW-Id-g4T" firstAttribute="leading" secondItem="Cz3-jA-t8A" secondAttribute="leading" id="cPz-el-K72"/>
                             <constraint firstItem="a2L-ae-e5M" firstAttribute="centerX" secondItem="fxu-pL-pyX" secondAttribute="centerX" id="dEf-1G-t2Q"/>
+                            <constraint firstItem="3NO-IH-12y" firstAttribute="top" secondItem="Cz3-jA-t8A" secondAttribute="top" constant="10" id="dcC-tc-RLK"/>
+                            <constraint firstItem="Cz3-jA-t8A" firstAttribute="trailing" secondItem="3NO-IH-12y" secondAttribute="trailing" id="eQq-q7-noC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Strings List" id="r6M-dT-Dqq"/>
                     <connections>
+                        <outlet property="segmentedControl" destination="3NO-IH-12y" id="6Cd-ie-dtn"/>
                         <outlet property="spinner" destination="a2L-ae-e5M" id="io2-dv-tvj"/>
                         <outlet property="stringsTableView" destination="RaW-Id-g4T" id="P5R-ae-e3n"/>
                     </connections>
