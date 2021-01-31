@@ -20,6 +20,13 @@ class LoginViewController: UIViewController, LoginViewProtocol {
     var coordinator: AppCoordinatorProtocol!
     var viewModel: LoginViewModelProtocol!
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+    }
+
     @IBAction func loginButtonPressed(_ sender: Any) {
         let validation = viewModel.credentialsValidation(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
         if viewModel.areCredentialsValid(validation) {
@@ -52,5 +59,12 @@ class LoginViewController: UIViewController, LoginViewProtocol {
         textField.layer.borderWidth = 1.0
         textField.layer.borderColor = UIColor.red.cgColor
         textField.layer.cornerRadius = 5.0
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

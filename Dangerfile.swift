@@ -1,4 +1,5 @@
-import Danger 
+import Danger
+
 let danger = Danger()
 
 let editedFiles = danger.git.modifiedFiles + danger.git.createdFiles
@@ -10,4 +11,3 @@ let editedAppFiles = editedFiles.filter {
 if danger.github.pullRequest.user.login == "someStarngeUsername" {
     warn("Not this guy again!")
 }
-

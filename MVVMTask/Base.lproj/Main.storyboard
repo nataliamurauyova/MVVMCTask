@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,6 +32,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter e-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YCQ-nr-O69">
                                         <rect key="frame" x="0.0" y="37" width="294" height="45"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="emailLabel"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="UXa-Yd-mRM"/>
                                         </constraints>
@@ -40,6 +41,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yWc-y6-WVJ">
                                         <rect key="frame" x="0.0" y="134.5" width="294" height="45"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="passwordLabel"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="lge-cX-Ar3"/>
                                         </constraints>
@@ -73,6 +75,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxc-uS-GDj">
                                 <rect key="frame" x="45" y="588" width="324" height="44"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <accessibility key="accessibilityConfiguration" identifier="loginButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="HyG-cp-MY3"/>
                                 </constraints>
@@ -139,6 +142,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="stringCellId"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

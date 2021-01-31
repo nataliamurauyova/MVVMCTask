@@ -26,10 +26,18 @@
 		77AA1DF225694E3A00CC674E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AA1DF125694E3A00CC674E /* AppCoordinator.swift */; };
 		77AA1E3A2569BC3500CC674E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AA1E392569BC3500CC674E /* Constants.swift */; };
 		AB700BE7CFDD7FA3EF5B5787 /* Pods_MVVMTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F1D6705B50D30EE1B1A876 /* Pods_MVVMTaskTests.framework */; };
+		EA10BA1025C7347000472565 /* MVVMTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10BA0F25C7347000472565 /* MVVMTaskUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		77AA1DAA2569379B00CC674E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77AA1D8B2569379600CC674E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77AA1D922569379600CC674E;
+			remoteInfo = MVVMTask;
+		};
+		EA10BA1225C7347000472565 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 77AA1D8B2569379600CC674E /* Project object */;
 			proxyType = 1;
@@ -66,6 +74,9 @@
 		96F1D6705B50D30EE1B1A876 /* Pods_MVVMTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F851BF03AC56AF794190E7 /* Pods-MVVMTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMTaskTests.release.xcconfig"; path = "Target Support Files/Pods-MVVMTaskTests/Pods-MVVMTaskTests.release.xcconfig"; sourceTree = "<group>"; };
 		B34021106CF509E0B2B9E469 /* Pods_MVVMTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA10BA0D25C7347000472565 /* MVVMTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA10BA0F25C7347000472565 /* MVVMTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMTaskUITests.swift; sourceTree = "<group>"; };
+		EA10BA1125C7347000472565 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +93,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB700BE7CFDD7FA3EF5B5787 /* Pods_MVVMTaskTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA10BA0A25C7347000472565 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +120,7 @@
 			children = (
 				77AA1D952569379600CC674E /* MVVMTask */,
 				77AA1DAC2569379B00CC674E /* MVVMTaskTests */,
+				EA10BA0E25C7347000472565 /* MVVMTaskUITests */,
 				77AA1D942569379600CC674E /* Products */,
 				94BE60D8940E6B481BCA8B4A /* Pods */,
 				40E36492EC044A8A5BF10404 /* Frameworks */,
@@ -113,6 +132,7 @@
 			children = (
 				77AA1D932569379600CC674E /* MVVMTask.app */,
 				77AA1DA92569379B00CC674E /* MVVMTaskTests.xctest */,
+				EA10BA0D25C7347000472565 /* MVVMTaskUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,6 +221,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EA10BA0E25C7347000472565 /* MVVMTaskUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EA10BA0F25C7347000472565 /* MVVMTaskUITests.swift */,
+				EA10BA1125C7347000472565 /* Info.plist */,
+			);
+			path = MVVMTaskUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -242,13 +271,31 @@
 			productReference = 77AA1DA92569379B00CC674E /* MVVMTaskTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		EA10BA0C25C7347000472565 /* MVVMTaskUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA10BA1625C7347000472565 /* Build configuration list for PBXNativeTarget "MVVMTaskUITests" */;
+			buildPhases = (
+				EA10BA0925C7347000472565 /* Sources */,
+				EA10BA0A25C7347000472565 /* Frameworks */,
+				EA10BA0B25C7347000472565 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA10BA1325C7347000472565 /* PBXTargetDependency */,
+			);
+			name = MVVMTaskUITests;
+			productName = MVVMTaskUITests;
+			productReference = EA10BA0D25C7347000472565 /* MVVMTaskUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		77AA1D8B2569379600CC674E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
+				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
 					77AA1D922569379600CC674E = {
@@ -256,6 +303,10 @@
 					};
 					77AA1DA82569379B00CC674E = {
 						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 77AA1D922569379600CC674E;
+					};
+					EA10BA0C25C7347000472565 = {
+						CreatedOnToolsVersion = 12.3;
 						TestTargetID = 77AA1D922569379600CC674E;
 					};
 				};
@@ -275,6 +326,7 @@
 			targets = (
 				77AA1D922569379600CC674E /* MVVMTask */,
 				77AA1DA82569379B00CC674E /* MVVMTaskTests */,
+				EA10BA0C25C7347000472565 /* MVVMTaskUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -291,6 +343,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		77AA1DA72569379B00CC674E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA10BA0B25C7347000472565 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -392,6 +451,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EA10BA0925C7347000472565 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA10BA1025C7347000472565 /* MVVMTaskUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -399,6 +466,11 @@
 			isa = PBXTargetDependency;
 			target = 77AA1D922569379600CC674E /* MVVMTask */;
 			targetProxy = 77AA1DAA2569379B00CC674E /* PBXContainerItemProxy */;
+		};
+		EA10BA1325C7347000472565 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 77AA1D922569379600CC674E /* MVVMTask */;
+			targetProxy = EA10BA1225C7347000472565 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -620,6 +692,44 @@
 			};
 			name = Release;
 		};
+		EA10BA1425C7347000472565 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MVVMTaskUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = iOSCourse.MVVMTaskUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MVVMTask;
+			};
+			name = Debug;
+		};
+		EA10BA1525C7347000472565 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MVVMTaskUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = iOSCourse.MVVMTaskUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MVVMTask;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -646,6 +756,15 @@
 			buildConfigurations = (
 				77AA1DC12569379B00CC674E /* Debug */,
 				77AA1DC22569379B00CC674E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA10BA1625C7347000472565 /* Build configuration list for PBXNativeTarget "MVVMTaskUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA10BA1425C7347000472565 /* Debug */,
+				EA10BA1525C7347000472565 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
